@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-32 - Section 5 - Typed Arrays, complete.
+32 - Section 6 - Tuples, complete.
 
 ## Changes from Stephen
 
