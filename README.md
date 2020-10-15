@@ -4,7 +4,12 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
+9 - Section 1 complete
+
 ## Changes from Stephen
+
+* I always name a todo list item as a Task, rather than a Todo.
+
 
 ### Git client
 
