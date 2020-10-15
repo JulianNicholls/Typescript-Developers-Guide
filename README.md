@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-9 - Section 1 complete
+28 - Section 4 - Annotations, complete.
 
 ## Changes from Stephen
 

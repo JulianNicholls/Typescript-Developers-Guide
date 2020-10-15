@@ -14,7 +14,6 @@ const logTask = (id: number, title: string, finished: boolean) => {
   has a title of ${title}
   Finished? ${finished}
   `);
-
 }
 
 axios.get(url).then(response => {
@@ -24,5 +23,4 @@ axios.get(url).then(response => {
   const finished = task.completed;
 
   logTask(id, title, finished);
-
 });
