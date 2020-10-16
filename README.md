@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-59 - Section 9 - Maps app, created company class.
+62 - Section 9 - Maps app, created CustomMap class.
 
 ## Changes from Stephen
 
@@ -14,7 +14,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 * I spell colour correctly :-).
 
-* My map is centred on the South of England, rather than the middle of Africa.
+* My map is centred on the South of England at a reasonable zoom level.
 
 
 ### Git client
