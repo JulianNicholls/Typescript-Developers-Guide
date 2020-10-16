@@ -4,11 +4,13 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-42 - Section 7 - Interfaces, complete.
+48 - Section 8 - Classes, complete.
 
 ## Changes from Stephen
 
 * I always name a todo list item as a Task, rather than a Todo.
+
+* I spell colour correctly :-).
 
 
 ### Git client
