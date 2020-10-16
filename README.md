@@ -14,6 +14,8 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 * I spell colour correctly :-).
 
+* My map is centred on the South of England, rather than the middle of Africa.
+
 
 ### Git client
 
