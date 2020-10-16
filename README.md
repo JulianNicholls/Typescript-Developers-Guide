@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-48 - Section 8 - Classes, complete.
+59 - Section 9 - Maps app, created company class.
 
 ## Changes from Stephen
 
