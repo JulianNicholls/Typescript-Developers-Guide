@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@types/faker": "^5.1.2",
+    "@types/googlemaps": "^3.40.0",
     "parcel-bundler": "^1.12.4",
     "typescript": "^4.0.3"
   },
