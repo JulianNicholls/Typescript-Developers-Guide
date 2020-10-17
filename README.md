@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-64 - Section 9 - Maps app, Add markers (badly).
+67 - Section 9 - Maps app, Add markers properly.
 
 ## Changes from Stephen
 
@@ -13,6 +13,8 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 * I always name a todo list item as a Task, rather than a Todo.
 
 * I spell colour correctly :-).
+
+* I have called the longitude inside a location `long` rather than `lng`.
 
 * My map is centred on the UK at a reasonable zoom level, and my Company and
 User classes create locations more or less within the UK and its surrounding seas.
