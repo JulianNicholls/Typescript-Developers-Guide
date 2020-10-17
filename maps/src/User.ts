@@ -6,7 +6,7 @@ export class User {
     this.location = {
       lat: parseFloat(faker.address.latitude(58.5, 50)),
       long: parseFloat(faker.address.longitude(1.7, -5.7))
-    }
+    };
   }
 
   name: string;

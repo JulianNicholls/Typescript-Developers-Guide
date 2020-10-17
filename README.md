@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-62 - Section 9 - Maps app, created CustomMap class.
+64 - Section 9 - Maps app, Add markers (badly).
 
 ## Changes from Stephen
 
@@ -14,8 +14,8 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 * I spell colour correctly :-).
 
-* My map is centred on the South of England at a reasonable zoom level.
-
+* My map is centred on the UK at a reasonable zoom level, and my Company and
+User classes create locations more or less within the UK and its surrounding seas.
 
 ### Git client
 
