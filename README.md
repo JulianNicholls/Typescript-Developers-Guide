@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-67 - Section 9 - Maps app, Add markers properly.
+71 - Section 9 - Maps app, complete.
 
 ## Changes from Stephen
 
@@ -18,6 +18,8 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 * My map is centred on the UK at a reasonable zoom level, and my Company and
 User classes create locations more or less within the UK and its surrounding seas.
+
+* I've added (very) basic styling to the apps.
 
 ### Git client
 
