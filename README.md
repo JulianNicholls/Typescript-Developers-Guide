@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-71 - Section 9 - Maps app, complete.
+74 - Section 10 - Sorting app set up.
 
 ## Changes from Stephen
 
