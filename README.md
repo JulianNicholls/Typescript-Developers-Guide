@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-74 - Section 10 - Sorting app set up.
+83 - Section 10 - Sorting app, refactor to NumbersCollection.
 
 ## Changes from Stephen
 
