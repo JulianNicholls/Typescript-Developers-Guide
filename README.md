@@ -21,6 +21,9 @@ User classes create locations more or less within the UK and its surrounding sea
 
 * I've added (very) basic styling to the apps.
 
+* My linked list keeps track of its length, and my Node is called `LLNode`
+because lots of other `Node` classes are already defined.
+
 ### Git client
 
 I have used Git at the command-line for more than 10 years. Over that time,
