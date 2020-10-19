@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-86 - Section 10 - Sorting app, Create CharactersCollection.
+95 - Section 10 - Sorting app, Complete.
 
 ## Changes from Stephen
 
@@ -22,7 +22,7 @@ User classes create locations more or less within the UK and its surrounding sea
 * I've added (very) basic styling to the apps.
 
 * My linked list keeps track of its length, and my Node is called `LLNode`
-because lots of other `Node` classes are already defined.
+because lots of other `Node` classes are already defined in various modules.
 
 ### Git client
 
