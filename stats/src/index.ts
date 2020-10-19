@@ -1,17 +1,16 @@
 import { MatchReader } from './MatchReader';
-import { MatchResult } from './MatchResult';
 import { CSVFileReader } from './CSVFileReader';
-
-let manUWins = 0;
+import { Summary } from './Summary';
+import { WinsAnalysis } from './Analysers/WinsAnalysis';
+import { ConsoleReport } from './ReportTargets/ConsoleReport';
 
 const csvReader = new CSVFileReader('football.csv');
 const matchReader = new MatchReader(csvReader);
 const matches = matchReader.load();
 
-matches.forEach(match => {
-  if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin ||
-    match[2] === 'Man United' && match[5] === MatchResult.AwayWin)
-    ++manUWins;
-});
+const summary = new Summary(
+  new WinsAnalysis('Bournemouth'),
+  new ConsoleReport()
+);
 
-console.log(`Manchester United won ${manUWins} times.`);
+summary.runReport(matches);

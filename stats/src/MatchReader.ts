@@ -1,9 +1,7 @@
 import { stringToDate } from './utils';
-import { MatchResult } from './MatchResult';
 import { DataReader } from './CSVFileReader';
-
-// Tuple for the match information
-type MatchData = [Date, string, string, number, number, MatchResult, string];
+import { MatchResult } from './MatchResult';
+import { MatchData } from './MatchData';
 
 export class MatchReader {
   constructor(private _reader: DataReader) { }
