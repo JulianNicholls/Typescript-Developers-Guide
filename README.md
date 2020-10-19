@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-95 - Section 10 - Sorting app, Complete.
+120 - Section 11 - Stats app, Complete second re-factor with composition.
 
 ## Changes from Stephen
 
