@@ -1,10 +1,14 @@
 import { stringToDate } from './utils';
-import { DataReader } from './CSVFileReader';
+import { CSVFileReader, DataReader } from './CSVFileReader';
 import { MatchResult } from './MatchResult';
 import { MatchData } from './MatchData';
 
 export class MatchReader {
   constructor(private _reader: DataReader) { }
+
+  static fromCSV(filename: string): MatchReader {
+    return new MatchReader(new CSVFileReader(filename));
+  }
 
   // While this could be void, there is no reason not to return the read data
   load(): MatchData[] {

@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-120 - Section 11 - Stats app, Complete second re-factor with composition.
+132 - Section 11 - Stats app, Complete.
 
 ## Changes from Stephen
 
@@ -19,10 +19,20 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 * My map is centred on the UK at a reasonable zoom level, and my Company and
 User classes create locations more or less within the UK and its surrounding seas.
 
-* I've added (very) basic styling to the apps.
+* I've added (very) basic styling to the maps app.
+
+* Generally, my classes have no `public` data, it's stored as `private` with
+an accessor `get` function.
 
 * My linked list keeps track of its length, and my Node is called `LLNode`
 because lots of other `Node` classes are already defined in various modules.
+
+* My `CSVFileReader read()` and `MatchReader load()` functions return the
+read data, because there's no good reason not to.
+
+* My `HTMLReport` class takes a filename in the constructor.
+
+* I chose to make the `Summary` static function return a console wins analysis.
 
 ### Git client
 
