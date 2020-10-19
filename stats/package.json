@@ -8,5 +8,8 @@
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
     "start": "concurrently yarn:start:*"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.10"
   }
 }
