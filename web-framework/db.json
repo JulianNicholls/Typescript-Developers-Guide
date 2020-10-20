@@ -9,6 +9,11 @@
       "name": "Tara",
       "age": 23,
       "id": 2
+    },
+    {
+      "name": "Clara",
+      "age": 49,
+      "id": 3
     }
   ]
 }

@@ -3,11 +3,8 @@ import { User } from './models/User';
 
 const user = new User({ name: 'Clara', age: 49 });
 
-const name = user.get('name');
-console.log(name);
-
-user.on('change', () => {
-  console.log('changed:', user);
+user.on('save', () => {
+  console.log('Saved:', user);
 });
 
-user.set({ id: 5 });
+user.save();
