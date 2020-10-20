@@ -1,14 +1,10 @@
+import axios from 'axios';
 import { User } from './models/User';
 
 const user = new User({ name: 'Julian', age: 23 });
 
-console.log(user.get('name'));
-console.log(user.get('age'));
+const baseURL = 'http://localhost:3100/users';
 
-user.set({ age: 24 });
-console.log(user.get('age'));
+const users = await axios.get(baseURL);
 
-user.set({ name: 'Julian N' });
-console.log(user.get('name'));
-
-user.set({});
+console.log(users);
