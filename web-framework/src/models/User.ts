@@ -1,3 +1,5 @@
+// I don't like doing this. We'll see if we revisit this later.
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Attributes } from './Attributes';
 import { Eventing } from './Eventing';
 import { Sync } from './Sync';
@@ -15,9 +17,27 @@ export class User {
     this.attributes = new Attributes<UserProps>(attrs);
   }
 
-  public attributes: Attributes<UserProps>;
-  public events = new Eventing();
-  public sync = new Sync<UserProps>(baseURL);
+  // Delegation FTW!
+  get get() {
+    return this.attributes.get;
+  }
+
+  set(update: UserProps) {
+    this.attributes.set(update);
+    this.events.trigger('change');
+  }
+
+  get on() {
+    return this.events.on;
+  }
+
+  get trigger() {
+    return this.events.trigger;
+  }
+
+  private attributes: Attributes<UserProps>;
+  private events = new Eventing();
+  private sync = new Sync<UserProps>(baseURL);
 }
 
 

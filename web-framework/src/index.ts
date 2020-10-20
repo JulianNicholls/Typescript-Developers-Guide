@@ -1,12 +1,13 @@
 // import axios from 'axios';
 import { User } from './models/User';
 
-// const baseURL = 'http://localhost:3100/users';
+const user = new User({ name: 'Clara', age: 49 });
 
-const user = new User({ name: 'Tara', age: 23 });
+const name = user.get('name');
+console.log(name);
 
-user.events.on('change', () => {
-  console.log('Changed', user);
+user.on('change', () => {
+  console.log('changed:', user);
 });
 
-user.events.trigger('change');
+user.set({ id: 5 });
