@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-132 - Section 11 - Stats app, Complete.
+132 - Section 13 - Web Framework, initial User class set up.
 
 ## Changes from Stephen
 
