@@ -10,16 +10,16 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 * I'm using Yarn instead of npm.
 
-* I always name a todo list item as a Task, rather than a Todo.
+* I always name a todo list item as a `Task`, rather than a `Todo`.
 
-* I spell colour correctly :-).
+* I spell colour and analyser correctly :-).
 
 * I have called the longitude inside a location `long` rather than `lng`.
 
 * My map is centred on the UK at a reasonable zoom level, and my Company and
 User classes create locations more or less within the UK and its surrounding seas.
 
-* I've added (very) basic styling to the maps app.
+* I've added (very) basic styling to the web appa.
 
 * Generally, my classes have no `public` data, it's stored as `private` with
 an accessor `get` function.
