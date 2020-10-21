@@ -1,4 +1,4 @@
-type Callback = () => void;
+export type Callback = () => void;
 
 export class Eventing {
   on = (eventName: string, callback: Callback): void => {
