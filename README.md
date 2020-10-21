@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-174 - Section 13 - Web Framework, Re-factored User with composition.
+190 - Section 13 - Web Framework, Binding Events.
 
 ## Changes from Stephen
 

@@ -24,4 +24,8 @@ export class User extends Model<UserProps> {
   static collection(): Collection<User, UserProps> {
     return new Collection<User, UserProps>(baseURL, User.buildUser);
   }
+
+  setRandomAge(): void {
+    this.set({ age: Math.floor(Math.random() * 100) });
+  }
 }
