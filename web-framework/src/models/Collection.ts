@@ -3,11 +3,13 @@
 
 import axios, { AxiosResponse } from 'axios';
 
-import { User, UserProps } from './User';
+// import { User, UserProps } from './User';
 import { Eventing } from './Eventing';
 
-export class Collection {
-  constructor(private baseURL: string) { }
+export class Collection<T, PropsType> {
+  constructor(
+    private baseURL: string,
+    private deserialise: (data: PropsType) => T) { }
 
   get on() {
     return this.events.on;
@@ -21,15 +23,14 @@ export class Collection {
     axios
       .get(this.baseURL)
       .then((response: AxiosResponse) => {
-        response.data.forEach((item: UserProps): void => {
-          const user = User.buildUser(item);
-          this.models.push(user);
+        response.data.forEach((value: PropsType): void => {
+          this.models.push(this.deserialise(value));
         });
 
         this.trigger('change');
       });
   }
 
-  models: User[] = [];
+  models: T[] = [];
   private events = new Eventing();
 }
