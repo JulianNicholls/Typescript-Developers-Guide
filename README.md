@@ -37,6 +37,8 @@ read data, because there's no good reason not to.
 * My json-server is running on port 3100, since I often have something else running
 on port 3000.
 
+* I have named my root URL as `baseURL` everywhere.
+
 ### Git client
 
 I have used Git at the command-line for more than 10 years. Over that time,

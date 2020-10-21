@@ -1,10 +1,13 @@
 // import axios from 'axios';
 import { User } from './models/User';
+import { Collection } from './models/Collection';
 
-const user = User.buildUser({ id: 4 });
+const baseURL = 'http://localhost:3100/users';
 
-user.on('change', () => {
-  console.log('Changed:', user);
+const collection = new Collection(baseURL);
+
+collection.on('change', () => {
+  console.log('Loaded!:', collection);
 });
 
-user.fetch();
+collection.fetch();

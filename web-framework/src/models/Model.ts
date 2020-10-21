@@ -4,7 +4,7 @@
 import { AxiosPromise, AxiosResponse } from 'axios';
 
 import { Callback } from './Eventing';
-import { HasID } from './Sync';
+import { HasID } from './APISync';
 
 interface ModelAttributes<T> {
   set(value: T): void;
@@ -26,24 +26,17 @@ export class Model<T extends HasID> {
   constructor(
     private attributes: ModelAttributes<T>,
     private events: Events,
-    private sync: Sync<T>) { }
+    private sync: Sync<T>
+  ) { }
 
   // Delegation FTW!
-  get get() {
-    return this.attributes.get;
-  }
+  get = this.attributes.get;
+  on = this.events.on;
+  trigger = this.events.on;
 
   set(update: T): void {
     this.attributes.set(update);
     this.events.trigger('change');
-  }
-
-  get on() {
-    return this.events.on;
-  }
-
-  get trigger() {
-    return this.events.trigger;
   }
 
   fetch(): void {

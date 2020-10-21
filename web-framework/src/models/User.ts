@@ -1,7 +1,7 @@
 import { Model } from './Model';
 import { Attributes } from './Attributes';
 import { Eventing } from './Eventing';
-import { APISync } from './Sync';
+import { APISync } from './APISync';
 
 export interface UserProps {
   id?: number;
