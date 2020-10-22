@@ -1,17 +1,8 @@
-import { User } from '../models/User';
+import { User, UserProps } from '../models/User';
+import { View, EventsMap } from './View';
 
-type EventCallback = () => void;
-
-export class UserForm {
-  constructor(public parent: Element, public model: User) {
-    this.bindModelChange();
-  }
-
-  bindModelChange(): void {
-    this.model.on('change', () => this.render());
-  }
-
-  eventsMap(): { [key: string]: EventCallback; } {
+export class UserForm extends View<User, UserProps> {
+  eventsMap(): EventsMap {
     return {
       'click:#set-name': this.onSetName,
       'click:#set-age': this.onSetAge,
@@ -48,29 +39,5 @@ export class UserForm {
       </div>
     </div>
     `;
-  }
-
-  render(): void {
-    const element = document.createElement('template');
-
-    element.innerHTML = this.template();
-
-    this.bindEvents(element.content);
-
-    // Clear and refill the parent
-    this.parent.innerHTML = '';
-    this.parent.append(element.content);
-  }
-
-  bindEvents(fragment: DocumentFragment): void {
-    const eventsMap = this.eventsMap();
-
-    for (const eventKey in eventsMap) {
-      const [eventName, selector] = eventKey.split(':');
-
-      fragment.querySelectorAll(selector).forEach(element => {
-        element.addEventListener(eventName, eventsMap[eventKey]);
-      });
-    }
   }
 }
