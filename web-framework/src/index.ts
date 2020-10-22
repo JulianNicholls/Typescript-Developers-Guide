@@ -1,6 +1,6 @@
 import { User } from './models/User';
 
-import { UserForm } from './views/UserForm';
+import { UserEdit } from './views/UserEdit';
 
 const user = User.buildUser({ id: 1 });
 
@@ -9,12 +9,14 @@ user.fetch();
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
-  const userForm = new UserForm(
+  const userEdit = new UserEdit(
     rootElement,
     user
   );
 
-  userForm.render();
+  userEdit.render();
+
+  console.log(userEdit);
 }
 else
   throw new Error('Cannot find element with id root');

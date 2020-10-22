@@ -1,8 +1,8 @@
 import { User, UserProps } from '../models/User';
-import { View, EventsMap } from './View';
+import { View, EventMap } from './View';
 
 export class UserForm extends View<User, UserProps> {
-  eventsMap(): EventsMap {
+  eventsMap(): EventMap {
     return {
       'click:#set-name': this.onSetName,
       'click:#set-age': this.onSetAge,
@@ -41,9 +41,3 @@ export class UserForm extends View<User, UserProps> {
     `;
   }
 }
-
-// <h2>User Form < /h2>
-//   < p class="display" >
-//     Name: ${ this.model.get('name'); } <br />;
-// Age: ${ this.model.get('age'); }
-// </p>;
