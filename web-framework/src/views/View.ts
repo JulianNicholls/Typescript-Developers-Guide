@@ -20,7 +20,9 @@ export abstract class View<T extends Model<PropsType>, PropsType> {
     element.innerHTML = this.template();
 
     this.bindEvents(element.content);
+
     this.mapRegions(element.content);
+    this.onRender();
 
     // Clear and refill the parent
     this.parent.innerHTML = '';
@@ -50,7 +52,6 @@ export abstract class View<T extends Model<PropsType>, PropsType> {
     }
   }
 
-
   eventsMap(): EventMap {
     return {};
   }
@@ -58,6 +59,8 @@ export abstract class View<T extends Model<PropsType>, PropsType> {
   regionsMap(): RegionMap {
     return {};
   }
+
+  onRender(): void { return; }
 
   regions: ElementMap = {};
   abstract template(): string;

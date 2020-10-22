@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-197 - Section 13 - Web Framework, Two-way binding.
+205 - Section 13 - Web Framework, View nesting.
 
 ## Changes from Stephen
 

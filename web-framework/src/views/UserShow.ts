@@ -8,7 +8,7 @@ export class UserShow extends View<User, UserProps> {
       <h2>User Form</h2>
       <p class="display">
         Name: ${this.model.get('name')}
-        <br />;
+        <br />
         Age: ${this.model.get('age')}
       </p>
     </div>
