@@ -2,7 +2,9 @@ import { User } from './models/User';
 
 import { UserForm } from './views/UserForm';
 
-const user = User.buildUser({ name: 'Julian', age: 37 });
+const user = User.buildUser({ id: 1 });
+
+user.fetch();
 
 const rootElement = document.getElementById('root');
 
