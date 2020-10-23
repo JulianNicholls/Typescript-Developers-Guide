@@ -1,22 +1,19 @@
 import { User } from './models/User';
+import { UserList } from './views/UserList';
+import { Collection } from './models/Collection';
 
-import { UserEdit } from './views/UserEdit';
+const baseURL = 'http://localhost:3100/users';
 
-const user = User.buildUser({ id: 1 });
+const users = new Collection(baseURL, User.buildUser);
 
-user.fetch();
+users.on('change', () => {
+  console.log(users);
 
-const rootElement = document.getElementById('root');
+  const root = document.getElementById('root');
 
-if (rootElement) {
-  const userEdit = new UserEdit(
-    rootElement,
-    user
-  );
+  if (root) {
+    new UserList(root, users).render();
+  }
+});
 
-  userEdit.render();
-
-  console.log(userEdit);
-}
-else
-  throw new Error('Cannot find element with id root');
+users.fetch();

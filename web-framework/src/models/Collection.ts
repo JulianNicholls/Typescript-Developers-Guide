@@ -3,7 +3,6 @@
 
 import axios, { AxiosResponse } from 'axios';
 
-// import { User, UserProps } from './User';
 import { Eventing } from './Eventing';
 
 export class Collection<T, PropsType> {
