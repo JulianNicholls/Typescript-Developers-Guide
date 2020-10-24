@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-213 - Section 14 - Express TS Server.
+224 - Section 14 - Express TS Server, complete.
 
 ## Changes from Stephen
 
@@ -19,7 +19,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 * My map is centred on the UK at a reasonable zoom level, and my Company and
 User classes create locations more or less within the UK and its surrounding seas.
 
-* I've added (very) basic styling to the web appa.
+* I've added (very) basic styling to the web apps.
 
 * Generally, my classes have no `public` data, it's stored as `private` with
 an accessor `get` function.
