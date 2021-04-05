@@ -1,0 +1,10 @@
+{
+  "name": "features",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Julian Nicholls <juliannicholls29@gmail.com> (https://reallybigshoe.co.uk/)",
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}

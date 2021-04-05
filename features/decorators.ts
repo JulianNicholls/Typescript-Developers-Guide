@@ -17,7 +17,7 @@ class Boat {
   }
 }
 
-// Just a plain decorator
+// Just a plain decorator for a method
 function logError(target: any, key: string, desc: PropertyDescriptor): void {
   const method = desc.value;
 
@@ -47,7 +47,7 @@ function catchError(errorMessage: string) {
   };
 }
 
-// A decorator for an Property. NO desc parameter!
+// A decorator for a Property. NO desc parameter!
 // Somewhat useless, since we can't access the property inside.
 function logProperty(target: any, key: string): void {
   console.log(key);
@@ -64,7 +64,6 @@ function logParameter(target: any, key: string, index: number): void {
 }
 
 // A class decorator
-
 function classDecorator(constructor: typeof Boat) {
   console.log(constructor);
 }
