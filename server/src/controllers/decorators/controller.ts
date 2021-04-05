@@ -5,6 +5,7 @@ import { Methods } from './Methods';
 import { MetadataKeys } from './MetadataKeys';
 
 export function controller(prefix: string) {
+  // eslint-disable-next-line @typescript-eslint/ban-types
   return function (target: Function): void {
     const router = AppRouter.getInstance();
 
@@ -14,8 +15,9 @@ export function controller(prefix: string) {
 
       if (path) {
         const method: Methods = Reflect.getMetadata(MetadataKeys.method, target.prototype, key);
+        const middlewares = Reflect.getMetadata(MetadataKeys.middleware, target.prototype, key) || [];
 
-        router[method](`${prefix}${path}`, routeHandler);
+        router[method](`${prefix}${path}`, ...middlewares, routeHandler);
       }
     }
   };
