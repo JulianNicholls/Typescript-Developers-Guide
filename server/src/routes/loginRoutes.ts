@@ -5,11 +5,6 @@ interface LoginFields {
   password: string | undefined;
 }
 
-// Stephen's solution
-// interface RequestWithBody {
-//   body: { [key: string]: string | undefined; };
-// }
-
 function requireAuth(req: Request, res: Response, next: NextFunction): void {
   if (req.session && req.session.loggedIn) {
     return next();
@@ -20,27 +15,7 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 
 const router = Router();
 
-router.get('/login', (req: Request, res: Response) => {
-  res.send(`
-  <style>
-  body { font-family: arial, helvetica, sans-serif; padding: 1rem; }
-  label { display: inline-block; width: 6em; margin-bottom: 0.75rem; }
-  input { font-size: inherit; padding: 0.3em;}
-  </style>
-  <form method="post">
-    <div>
-      <label for="email">Email</label>
-      <input id="email" name="email" />
-    </div>
 
-    <div>
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" />
-    </div>
-    <button>Log in</button>
-  </form>
-  `);
-});
 
 router.post('/login', (req: Request<unknown, unknown, LoginFields>, res: Response) => {
   const { email, password } = req.body;
