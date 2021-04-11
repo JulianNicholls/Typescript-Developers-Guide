@@ -1,5 +1,10 @@
 import { Request, Response } from 'express';
-import { get, controller } from './decorators';
+import { get, controller, post, validateBody } from './decorators';
+
+interface LoginFields {
+  email: string | undefined;
+  password: string | undefined;
+}
 
 @controller('/auth')
 class LoginController {
@@ -24,5 +29,23 @@ class LoginController {
     <button>Log in</button>
   </form>
   `);
+  }
+
+  @post('/login')
+  @validateBody('email', 'password')
+  postLogin(req: Request, res: Response) {
+    // <unknown, unknown, LoginFields >
+    const { email, password } = req.body;
+
+    if (email === 'hi@example.com' && password === 'password') {
+      // Mark person as logged in
+      req.session = {
+        loggedIn: true
+      };
+
+      // Redirect to the root
+      res.redirect('/');
+    }
+    else res.status(400).send('Invalid email address or password');
   }
 }

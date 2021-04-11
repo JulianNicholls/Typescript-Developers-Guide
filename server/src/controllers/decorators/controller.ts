@@ -11,7 +11,7 @@ function bodyValidators(keys: string): RequestHandler {
 
     for (const key of keys) {
       if (!req.body[key]) {
-        return res.status(422).send('Invalid request');
+        return res.status(422).send(`Invalid request: ${key} must be specified`);
       }
     }
 
