@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-232 - Section 15 - Decorators, complete.
+254 - Section 16 - Advanced Express and TS, complete.
 
 ## Changes from Stephen
 
