@@ -1,4 +1,6 @@
-import { Router, Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
+
+import { controller, get, use } from './decorators';
 
 function requireAuth(req: Request, res: Response, next: NextFunction): void {
   if (req.session && req.session.loggedIn) {
@@ -8,49 +10,43 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
   res.status(403).send('Not authorised');
 }
 
-const router = Router();
-
-
-
-
-router.get('/', (req: Request, res: Response) => {
-  if (req.session && req.session.loggedIn) {
-    res.send(`
+@controller('')
+class RootController {
+  @get('/')
+  getRoot(req: Request, res: Response) {
+    if (req.session && req.session.loggedIn) {
+      res.send(`
       <style>
       body { font-family: arial, helvetica, sans-serif; padding: 1rem; }
       </style>
       <div>
         <div>
-          You are logged in.
-          <a href="/logout">Log out</a>
+          <h2>You are logged in.</h2>
+          <a href="/auth/logout">Log out</a><br />
           <a href="/protected">See the secrets</a>
         </div>
       </div>
     `);
-  }
-  else {
-    res.send(`
+    }
+    else {
+      res.send(`
       <style>
       body { font-family: arial, helvetica, sans-serif; padding: 1rem; }
       </style>
       <div>
         <div>
-          You are not logged in.
-          <a href="/login">Log in</a>
+          <h2>You are not logged in.</h2>
+          <a href="/auth/login">Log in</a>
         </div>
       </div>
     `);
+    }
   }
-});
 
-router.get('/logout', (req: Request, res: Response) => {
-  req.session = null;
-
-  res.redirect('/');
-});
-
-router.get('/protected', requireAuth, (req: Request, res: Response) => {
-  res.send(`
+  @get('/protected')
+  @use(requireAuth)
+  getProtected(req: Request, res: Response) {
+    res.send(`
     <style>
     body { font-family: arial, helvetica, sans-serif; padding: 1rem; }
     h1 { font-size: 1.8rem; }
@@ -63,6 +59,5 @@ router.get('/protected', requireAuth, (req: Request, res: Response) => {
       </div>
     </div>
   `);
-});
-
-export { router };
+  }
+}
