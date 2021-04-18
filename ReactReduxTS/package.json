@@ -1,6 +1,6 @@
 {
-  "name": "reactreduxts",
-  "version": "0.1.0",
+  "name": "react-redux-ts",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

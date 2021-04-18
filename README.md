@@ -39,6 +39,8 @@ on port 3000.
 
 * I have named my root URL as `baseURL` everywhere.
 
+* I sorta skipped the stuff about React Components, since that has not aged well.
+
 ### Git client
 
 I have used Git at the command-line for more than 10 years. Over that time,
