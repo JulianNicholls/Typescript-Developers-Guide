@@ -11,35 +11,40 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 * I'm using Yarn instead of npm.
 
 * I always name a todo list item as a `Task`, rather than a `Todo`.
+  This is relevant to the fetch-json and React-Redux parts.
 
 * I spell colour and analyser correctly :-).
 
 * I have called the longitude inside a location `long` rather than `lng`.
 
 * My map is centred on the UK at a reasonable zoom level, and my Company and
-User classes create locations more or less within the UK and its surrounding seas.
+  User classes create locations more or less within the UK and its surrounding seas.
 
 * I've added (very) basic styling to the web apps.
 
 * Generally, my classes have no `public` data, it's stored as `private` with
-an accessor `get` function.
+  an accessor `get` function.
 
 * My linked list keeps track of its length, and my Node is called `LLNode`
-because lots of other `Node` classes are already defined in various modules.
+  because lots of other `Node` classes are already defined in various modules.
 
 * My `CSVFileReader read()` and `MatchReader load()` functions return the
-read data, because there's no good reason not to.
+  read data, because there's no good reason not to.
 
 * My `HTMLReport` class takes a filename in the constructor.
 
 * I chose to make the `Summary` static function return a console wins analysis.
 
 * My json-server is running on port 3100, since I often have something else running
-on port 3000.
+  on port 3000.
 
 * I have named my root URL as `baseURL` everywhere.
 
-* I sorta skipped the stuff about React Components, since that has not aged well.
+* I sorta skipped the initial stuff about React Components, since that has not aged well.
+
+* I rarely, if ever, use the name `payload` for the data contained in a Redux /
+  reducer action. The main exception to this is when using `redux-promise` which
+  requires that the promised data name has to be `payload`.
 
 ### Git client
 
