@@ -4,7 +4,7 @@ This is the code from Stephen Grider's [Typescript, the Complete Developer's Gui
 
 ## Progress
 
-254 - Section 16 - Advanced Express and TS, complete.
+Completed course.
 
 ## Changes from Stephen
 
