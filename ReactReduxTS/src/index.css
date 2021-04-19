@@ -3,18 +3,21 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-div.counter {
-  display: flex;
-  align-items: center;
-}
-
 button {
+  font-size: inherit;
   padding: 0.5em 1em;
-  font-size: 2vh;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
-span {
-  font-size: 5vh
+div.tasks {
+  padding: 1rem;
+}
+
+div.task:hover {
+  color: hsl(0, 75%, 45%);
+  cursor: pointer;
+}
+
+div.task:hover::after {
+  content: 'DELETE';
+  margin-left: 1rem;
 }
